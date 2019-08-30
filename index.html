@@ -40,18 +40,20 @@
         color: rgb(99, 107, 111);
         font-family: "Courier", mono-space;
         font-size: 62.5%;
-        word-break: normal;
       }
 
       body {
-        display: flex;
-        flex-direction: column;
         height: 100vh;
         margin: 0;
         position: relative;
       }
 
-      header {
+      main,
+      footer {
+        opacity: 0;
+      }
+
+      .teaser {
         font-size: 5.4rem;
         position: absolute;
         top: 50%;
@@ -59,10 +61,6 @@
         transform: translate(-50%, -50%);
       }
 
-      main,
-      footer {
-        opacity: 0;
-      }
       .teaser p,
       hr {
         margin: 0;
@@ -100,20 +98,18 @@
       </div>
 
       <div class="sub-title center">
-        <p>
-          <span class="spacing">Full-Stack </span>Software Development<span
-            class="spacing"
-          >
-            & Consultancy</span
-          >
-        </p>
+        <p>Full-Stack Software Development & Consultancy</p>
       </div>
 
       <div class="about center">
-        <p class="spacing">
-          JavaScript Node.js React React-Native C# .NET
-        </p>
+        <p>Working with</p>
+        <p class="spacing">JavaScript Node.js React React-Native C# .NET</p>
       </div>
+
+      <div class="about center">
+          <p>Playing around with</p>
+          <p class="spacing">TypeScript Rust</p>
+        </div>
     </main>
 
     <footer class="footer">

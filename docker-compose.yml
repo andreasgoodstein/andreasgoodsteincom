@@ -1,0 +1,23 @@
+version: '3'
+services:
+  build:
+    build: .
+    working_dir: /app
+    command: ['parcel', 'build', 'index.html']
+    volumes:
+      - ./index.html:/app/index.html
+      - ./assets:/app/assets
+      - ./dist:/app/dist
+  
+  dev:
+    build: .
+    command: ['parcel', '/app/index.html', '--hmr-port=1235']    
+    environment:
+      - CHOKIDAR_USEPOLLING=1
+    volumes:
+      - ./index.html:/app/index.html
+      - ./assets:/app/assets
+    ports:
+      - 1234:1234
+      - 1235:1235
+  

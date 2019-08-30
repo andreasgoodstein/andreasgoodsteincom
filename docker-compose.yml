@@ -11,7 +11,8 @@ services:
   
   dev:
     build: .
-    command: ['parcel', '/app/index.html', '--hmr-port=1235']    
+    working_dir: /app
+    command: ['parcel', 'index.html', '--hmr-port=1235']    
     environment:
       - CHOKIDAR_USEPOLLING=1
     volumes:

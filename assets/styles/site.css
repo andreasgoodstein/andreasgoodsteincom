@@ -1,13 +1,12 @@
 html {
   word-break: normal;
 }
-      
+
 body {
-  display: flex;
   flex-direction: column;
 }
 
-main {  
+main {
   animation: fade-in 0.2s 1s forwards;
   display: flex;
   flex: 5;
@@ -16,13 +15,29 @@ main {
   padding: 1rem;
 }
 
-footer {  
+footer {
   animation: fade-in 0.2s 1s forwards;
   display: flex;
   flex: 1;
   flex-direction: column;
   justify-content: flex-end;
   padding: 1rem;
+}
+
+p,
+a {
+  font-size: 1.6rem;
+}
+
+.about {
+  margin-bottom: 1rem;
+}
+.about p {
+  font-size: 2.4rem;  
+}
+
+.center {
+  text-align: center;
 }
 
 .column {
@@ -32,50 +47,13 @@ footer {
   justify-content: center;
 }
 
-.row {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.title {
-  font-size: 5.4rem;
-  margin: 0;
-}
-.title p {
-  margin: 0;
-}
-
-.sub-title {
-  font-size: 2.4rem;
-  margin-bottom: 2rem;
-}
-
-.center {
-  text-align: center;
-}
-
 .info {
-  font-size: 1.2rem;
-}
-
-.about {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
 }
 
 .link-icon {
   height: 20px;
   width: 20px;
-}
-
-.spacing {
-  word-spacing: 1.5rem;
-}
-
-.teaser {
-  animation: fade-out 0.2s 0.8s forwards;
 }
 
 .link {
@@ -96,6 +74,46 @@ footer {
 }
 .links:visited {
   color: rgb(99, 107, 111);
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.spacing {
+  word-spacing: 1.5rem;
+}
+
+.sub-title {
+  margin-bottom: 2rem;
+}
+.sub-title p {
+  font-size: 2.4rem;
+}
+
+.teaser {
+  animation: fade-out 0.2s 0.8s forwards;
+}
+
+.title {
+  margin: 0;
+}
+.title p {
+  font-size: 5.4rem;
+  margin: 0;
+}
+
+.underline {
+  border-bottom: 1px solid #ccc;
+  display: inline-block;
+  margin-bottom: 0;
 }
 
 @keyframes fade-in {

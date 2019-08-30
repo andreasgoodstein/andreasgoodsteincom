@@ -34,6 +34,13 @@
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://andreasgoodstein.com" />
     <link rel="stylesheet" href="assets/styles/site.css" />
+    <!-- <link
+      FIREFOX NOT READY FOR ASYNC STYLESHEETS
+      rel="preload"
+      href="assets/styles/site.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    /> -->
 
     <style>
       html {
@@ -43,6 +50,7 @@
       }
 
       body {
+        display: flex;
         height: 100vh;
         margin: 0;
         position: relative;
@@ -54,15 +62,15 @@
       }
 
       .teaser {
-        font-size: 5.4rem;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
       }
-
+      
       .teaser p,
       hr {
+        font-size: 5.4rem;
         margin: 0;
       }
       .teaser hr {
@@ -89,6 +97,7 @@
       <div class="teaser">
         <p>A</p>
         <hr />
+        <noscript>Please enable JavaScript to continue...</noscript>
       </div>
     </header>
 
@@ -102,17 +111,21 @@
       </div>
 
       <div class="about center">
-        <p>Working with</p>
+        <p class="underline">Working with</p>
         <p class="spacing">JavaScript Node.js React React-Native C# .NET</p>
       </div>
 
       <div class="about center">
-          <p>Playing around with</p>
-          <p class="spacing">TypeScript Rust</p>
-        </div>
+        <p class="underline">Playing around with</p>
+        <p class="spacing">TypeScript Rust</p>
+      </div>
     </main>
 
     <footer class="footer">
+      <div class="center">
+        <p class="no-margin underline">Find me here</p>
+      </div>
+
       <div class="links center">
         <a class="link" href="mailto:andreasgoodstein@gmail.com">
           andreasgoodstein@gmail.com
@@ -136,10 +149,6 @@
             alt="github icon"
           />
         </a>
-      </div>
-
-      <div class="info center">
-        <p>CVR: 37956678</p>
       </div>
     </footer>
   </body>

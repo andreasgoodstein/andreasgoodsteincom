@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Andreas Goodstein" />
+
+    <title>
+      Note Tool - Andreas Goodstein
+    </title>
+
+    <link rel="canonical" href="https://andreasgoodstein.com/notes" />
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../assets/styles/site.css" />
+
+    <style>
+      html {
+        color: rgb(99, 107, 111);
+        font-family: system-ui, sans-serif;
+        font-size: 62.5%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      textarea {
+        height: 100vh;
+        width: 100vw;
+      }
+    </style>
+  </head>
+
+  <body>
+      <main>
+        <textarea></textarea>
+      </main>
+
+      <script type="text/javascript">
+        (function initializeTextArea () {
+            const textArea = document.getElementById('textArea');
+            if (!textArea){
+                return;
+            }
+
+            let debounced;
+            textArea.addEventListener('change', (event) => {
+                if (debounced){
+                    clearTimeout(debounced);
+                }
+
+                debounced = setTimeout(() => {
+                    localStorage.setItem('textArea', event?.target?.value ?? '');                    
+                }, 333);
+            })
+
+            textArea.value = localStorage.getItem('textArea') ?? '';
+        })();
+    </script>
+  </body>
+</html>
